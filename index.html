@@ -29,13 +29,14 @@
         <script type="text/javascript">
             var tmp = location.hostname.split('.');
             var ext = tmp[tmp.length - 1];
+            var www = tmp.length > 2 ? 'www.' : '';
 
             if (/manonetalex.[\w]+/.test(location.hostname)) {
                 document.title = 'manon et alex';
-                document.write('<a href="http://alexetmanon.' + ext + '" class="title">manon et alex</a>');
+                document.write('<a href="http://' + www + 'alexetmanon.' + ext + '" class="title">manon et alex</a>');
             }
             else {
-                document.write('<a href="http://manonetalex.' + ext + '" class="title">alex et manon</a>');
+                document.write('<a href="http://' + www + 'manonetalex.' + ext + '" class="title">alex et manon</a>');
             }
         </script>
 
