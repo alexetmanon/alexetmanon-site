@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>alex et manon</title>
+		<style type="text/css">
+			body {
+				text-align:center;
+				background:#2d2d2d;
+			}
+			h1 {
+				font-size:6em;
+				font-weight:bold;
+				margin:250px 0 25px 0;
+				text-shadow:0px 1px 1px #444;
+				color:#1a1a1a;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			if (/manonetalex.[\w]+/.test(location.hostname)) {
+				document.title = "manon et alex";
+				document.write("<h1>manon et alex</h1>");
+			} else {
+				document.write("<h1>alex et manon</h1>");
+			}
+		</script>
+	</body>
+</html>
