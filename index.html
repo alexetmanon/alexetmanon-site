@@ -13,33 +13,84 @@
                 color:#1a1a1a;
                 font-size:2em;
             }
+            section {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+            }
             .title {
                 display:block;
                 letter-spacing:-8px;
                 font-size:3em;
-                margin:250px 0 25px 0;
+                margin:0;
             }
             a, a:focus, a:hover, a:active {
                 color:#1a1a1a;
                 text-decoration:none;
             }
+            h2 {
+                font-weight:normal;
+                font-size:.8em;
+                margin-top:5px;
+            }
+            footer {
+                margin-top:50px;
+            }
+
+            /* Flex centering */
+            .Aligner {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                height: 100%;
+            }
+            .Aligner-item--fixed {
+                -webkit-box-flex: 0;
+                -webkit-flex: none;
+                -ms-flex: none;
+                flex: none;
+            }
         </style>
     </head>
     <body>
-        <script type="text/javascript">
-            var tmp = location.hostname.split('.');
-            var ext = tmp[tmp.length - 1];
-            var www = tmp.length > 2 ? 'www.' : '';
+    <section>
+        <div class="Aligner">
+            <div class="Aligner-item--fixed">
+                <script type="text/javascript">
+                    var tmp = location.hostname.split('.');
+                    var ext = tmp[tmp.length - 1];
+                    var www = tmp.length > 2 ? 'www.' : '';
 
-            if (/manonetalex.[\w]+/.test(location.hostname)) {
-                document.title = 'manon et alex';
-                document.write('<a href="http://' + www + 'alexetmanon.' + ext + '" class="title">manon et alex</a>');
-            }
-            else {
-                document.write('<a href="http://' + www + 'manonetalex.' + ext + '" class="title">alex et manon</a>');
-            }
-        </script>
+                    if (/manonetalex.[\w]+/.test(location.hostname)) {
+                        document.title = 'manon et alex';
+                        document.write('<a href="http://' + www + 'alexetmanon.' + ext + '" class="title">manon et alex</a>');
+                    }
+                    else {
+                        document.write('<a href="http://' + www + 'manonetalex.' + ext + '" class="title">alex et manon</a>');
+                    }
+                </script>
 
-        <a href="https://www.facebook.com/Alex-et-Manon-409550979234480/">facebook</a> et <a href="https://twitter.com/a_et_m">twitter</a>
+                <h2>concepteurs d'applications mobiles</h2>
+
+                <footer>
+                    <a href="mailto:bonjour@alexetmanon.com" target="_top">bonjour@alexetmanon.com</a>
+                    <br>
+                    <a href="https://www.facebook.com/Alex-et-Manon-409550979234480/">facebook</a> et <a href="https://twitter.com/a_et_m">twitter</a>
+                </footer>
+            </div>
+        </div>
+    </section>
     </body>
 </html>
