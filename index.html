@@ -6,48 +6,14 @@
         <style type="text/css">
             body {
                 text-align:center;
-                background:#2d2d2d;
-                font-family:Verdana;
+                background:#fff;
+                font-family:sans-serif, Verdana;
                 font-weight:lighter;
-                text-shadow:0px 1px 1px #444;
-                color:#1a1a1a;
-                font-size:2em;
+                font-size:1.4em;
+                padding: 0;
+                margin: 0;
             }
-            section {
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                margin: auto;
-            }
-            .title {
-                display:block;
-                letter-spacing:-8px;
-                font-size:3em;
-                margin:0;
-            }
-            a, a:focus, a:hover, a:active {
-                color:#1a1a1a;
-                text-decoration:none;
-            }
-            h2 {
-                font-weight:normal;
-                font-size:.9em;
-                margin-top:5px;
-            }
-            footer {
-                margin-top:50px;
-            }
-
-            @media only screen and (max-device-width: 480px) {
-                body {
-                    font-size:2.8em;
-                }
-            }
-
-            /* Flex centering */
-            .Aligner {
+            .container {
                 display: -webkit-box;
                 display: -webkit-flex;
                 display: -ms-flexbox;
@@ -60,43 +26,103 @@
                 -webkit-justify-content: center;
                 -ms-flex-pack: center;
                 justify-content: center;
-                height: 100%;
+                height: 100vh;
             }
-            .Aligner-item--fixed {
-                -webkit-box-flex: 0;
-                -webkit-flex: none;
-                -ms-flex: none;
-                flex: none;
+            .content-centered {
+                flex: 0 1 auto;
+                max-width: 90vw;
+            }
+            .title {
+                display:block;
+                margin-bottom: 1.8em;
+            }
+            .title-img {
+                display: block;
+                margin: 0 auto;
+                cursor: pointer;
+                max-width: 45vw;
+            }
+            .box {
+                display: inline-block;
+                color: #fff;
+                padding: 0.8em 1.6em;
+                margin: 0;
+            }
+            .box-blue {
+                background: #259ac1;
+            }
+            .box-red {
+                background: #f4707d;
+            }
+            .box-yellow {
+                color: #259ac1;
+                background: #ffdd5e;
+            }
+            .box-clear.box-red {
+                background: #fff;
+                color: #f4707d;
+                border: 1px solid #f4707d;
+                margin: 0 0.25em;
+            }
+            .margin-top {
+                margin-top: 1em;
+            }
+            a, a:focus, a:hover, a:active {
+                color:#1a1a1a;
+                text-decoration:none;
+            }
+            footer {
+                margin-top:50px;
+            }
+            @media only screen and (max-device-width: 480px) {
+                body {
+                    font-size:2.5em;
+                }
+                .title-img {
+                    max-width:90%;
+                }
             }
         </style>
     </head>
     <body>
-    <section>
-        <div class="Aligner">
-            <div class="Aligner-item--fixed">
+        <div class="container">
+            <div class="content-centered">
                 <script type="text/javascript">
-                    var tmp = location.hostname.split('.');
-                    var ext = tmp[tmp.length - 1];
-                    var www = tmp.length > 2 ? 'www.' : '';
+                    var tmp = location.hostname.split('.'),
+                        ext = tmp[tmp.length - 1],
+                        www = tmp.length > 2 ? 'www.' : '';
 
                     if (/manonetalex.[\w]+/.test(location.hostname)) {
                         document.title = 'manon et alex';
-                        document.write('<a href="http://' + www + 'alexetmanon.' + ext + '" class="title">manon et alex</a>');
+                        document.write('<a href="http://' + www + 'alexetmanon.' + ext + '" class="title"><img src="assets/logo-manonetalex.png" class="title-img"></a>');
                     }
                     else {
-                        document.write('<a href="http://' + www + 'manonetalex.' + ext + '" class="title">alex et manon</a>');
+                        document.write('<a href="http://' + www + 'manonetalex.' + ext + '" class="title"><img src="assets/logo-alexetmanon.png" class="title-img"></a>');
                     }
                 </script>
 
-                <h2>concepteurs d'applications mobiles</h2>
+                <section>
+                    <div>
+                        <p class="box box-blue">concoivent des applications mobiles</p>
+                    </div>
+                    <div>
+                        <p class="box box-red">et n'ont pas encore conçu leur propre site</p>
+                    </div>
+                    <div>
+                        <p class="box box-yellow">désolé :)</p>
+                    </div>
+                </section>
 
                 <footer>
-                    <a href="mailto:bonjour@alexetmanon.com" target="_top">bonjour@alexetmanon.com</a>
-                    <br>
-                    <a href="https://www.facebook.com/Alex-et-Manon-409550979234480/">facebook</a> et <a href="https://twitter.com/a_et_m">twitter</a>
+                    <div>
+                        <a href="https://www.facebook.com/Alex-et-Manon-409550979234480/" class="box box-clear box-red">facebook</a>
+                        <a href="https://twitter.com/a_et_m" class="box box-clear box-red">twitter</a>
+                    </div>
+                    <div class="margin-top">
+                        <a href="mailto:bonjour@alexetmanon.com" target="_top" class="box box-clear box-red">bonjour@alexetmanon.com</a>
+                    </div>
                 </footer>
             </div>
         </div>
-    </section>
     </body>
 </html>
