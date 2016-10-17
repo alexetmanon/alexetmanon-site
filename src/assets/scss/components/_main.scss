@@ -1,0 +1,21 @@
+.aetm--sticky-wrapper {
+    width: 100%;
+}
+
+.aetm--box {
+    padding: 2em;
+}
+
+.no-js {
+  @include breakpoint(small only) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .title-bar {
+      display: none;
+    }
+  }
+}
