@@ -1,0 +1,30 @@
+{
+  "name": "alexetmanon-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexetmanon/alexetmanon-site.git"
+  },
+  "author": "Alexandre Bonhomme <wall-e@alexetmanon.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/alexetmanon/alexetmanon-site/issues"
+  },
+  "homepage": "https://github.com/alexetmanon/alexetmanon-site#readme",
+  "dependencies": {
+    "angular": "1.5.7",
+    "angular-resource": "1.5.7"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}
