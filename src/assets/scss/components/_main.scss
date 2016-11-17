@@ -1,9 +1,148 @@
-.aetm--sticky-wrapper {
+.aetm--header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.aetm--header--logo {
     width: 100%;
+    margin-top: 4rem;
+}
+
+.aetm--header--text {
+    margin: 2rem 0;
+    font-family: Roboto;
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.2;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: $aetm-medium-pink;
+}
+
+.aetm--header--next-section {
+    width: 15%;
+    margin: 0 auto -3rem auto;
+}
+
+.aetm--gold {
+    color: $aetm-gold !important;
+}
+
+.aetm--blue {
+    color: $aetm-blue !important;
+}
+
+.aetm--pink {
+    color: $aetm-pink !important;
 }
 
 .aetm--box {
-    padding: 2em;
+    padding: 3rem;
+}
+
+.aetm--title-primary {
+    position: relative;
+    font-family: Futura-Book;
+    font-size: 2rem;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    margin: 0 0 1rem -2rem;
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 4rem;
+        border-bottom-width: 4px;
+        border-bottom-style: solid;
+        left: -2rem;
+        bottom: 0;
+    }
+
+    &.aetm--blue::after {
+        border-bottom-color: $aetm-blue;
+    }
+
+    &.aetm--gold::after {
+        border-bottom-color: $aetm-gold;
+    }
+
+    &.aetm--pink::after {
+        border-bottom-color: $aetm-pink;
+    }
+}
+
+.aetm--title-second {
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: $white;
+    margin: 0;
+}
+
+.aetm--text-primary {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.9px;
+    text-align: center;
+}
+
+.aetm--text-second {
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.8px;
+    text-align: left;
+    color: $warm-grey;
+}
+
+.aetm--didyouknow {
+    background: $aetm-pink;
+}
+
+.aetm--products--logo {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.aetm--us {
+    .aetm--title-primary {
+        line-height: 1.06;
+
+        &::after {
+            bottom: -4px;
+        }
+    }
+}
+
+.aetm--footer {
+    background: $aetm-blue;
+}
+
+.aetm--footer--logo {
+    width: 14rem;
+    margin: 0 auto;
+}
+
+.aetm--footer--subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: 3.36;
+    letter-spacing: 0.1px;
+    text-align: center;
+    color: $white;
 }
 
 .no-js {
