@@ -191,8 +191,45 @@ $aetm-second-text-size: 1rem;
     font-weight: 300;
     font-style: italic;
     font-stretch: normal;
-    line-height: 3.36;
+    line-height: 2.4;
     letter-spacing: 0.1px;
+    text-align: center;
+    color: $white;
+}
+
+.aetm--footer--separator {
+    width: 25%;
+    border-bottom-color: $white;
+}
+
+.aetm--footer--links {
+    max-width: 30rem;
+    margin: 0 auto;
+
+    a {
+        font-size: $aetm-second-text-size;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 2;
+        letter-spacing: 0.8px;
+        text-align: center;
+        color: $white;
+
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+
+.aetm--footer--legals {
+    margin: 1rem 0 0 0;
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.64;
+    letter-spacing: 0.6px;
     text-align: center;
     color: $white;
 }
