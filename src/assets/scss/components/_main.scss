@@ -127,6 +127,8 @@
 }
 
 .aetm--contact {
+    padding: 4rem 3rem;
+
     .aetm--text-second {
         font-style: italic;
         font-weight: 500;
@@ -138,7 +140,7 @@
     border: solid 1px $white;
     color: $white !important;
     padding: 0.8rem 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-size: $aetm-second-text-size;
     font-weight: 500;
     font-style: normal;
