@@ -21,13 +21,17 @@
 .aetm--header--text {
     margin-top: 2rem;
     font-family: Roboto;
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 300;
     font-style: italic;
     line-height: 1.2;
     letter-spacing: 0.3px;
     text-align: center;
     color: $aetm-medium-pink;
+
+     @include breakpoint(medium) {
+        font-size: 2.6rem;
+    }
 }
 
 .aetm--header--next-section {
