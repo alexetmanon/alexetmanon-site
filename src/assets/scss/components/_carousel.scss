@@ -1,5 +1,44 @@
 @charset "UTF-8";
 
+@import 'slick.scss';
+
+.aetm--carousel {
+    position: relative;
+    margin: 0 -2rem;
+
+    div {
+        display: none;
+
+        &:first-child {
+            display: block;
+        }
+    }
+
+    &.slick-initialized div {
+        display: block;
+    }
+}
+
+.aetm--carousel--read {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    padding: 0.6rem 1rem;
+    background-color: $aetm-blue;
+
+    img {
+        width: 1.6rem;
+        margin-left: 1rem;
+    }
+
+    img, span {
+        vertical-align: middle;
+        display: inline;
+    }
+}
+
+
 /* Slider */
 
 .slick-slide {

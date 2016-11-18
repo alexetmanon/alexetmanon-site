@@ -1,0 +1,105 @@
+$aetm-primary-title-size: 2.2rem;
+$aetm-second-title-size: 1.2rem;
+$aetm-primary-text-size: 1.2rem;
+$aetm-second-text-size: 1rem;
+
+$aetm-max-size-main-content: rem-calc(585);
+
+.aetm--gold {
+    color: $aetm-gold !important;
+}
+
+.aetm--darkgold {
+    color: $aetm-darkgold !important;
+}
+
+.aetm--blue {
+    color: $aetm-blue !important;
+}
+
+.aetm--pink {
+    color: $aetm-pink !important;
+}
+
+.aetm--white {
+    color: $white !important;
+}
+
+.aetm--box {
+    padding: 3rem;
+}
+
+.aetm--box--lille-bg {
+    margin: 1rem;
+    background: url('../img/lille-1000.jpg');
+    background-size: cover;
+}
+
+.aetm--box--medium {
+    max-width: $aetm-max-size-main-content;
+    margin: 0 auto;
+}
+
+.aetm--title-primary {
+    position: relative;
+    font-family: Futura-Book;
+    font-size: $aetm-primary-title-size;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    margin: 0 0 1rem -2rem;
+    text-align: left;
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 3rem;
+        border-bottom-width: 4px;
+        border-bottom-style: solid;
+        left: -1rem;
+        bottom: 0;
+    }
+
+    &.aetm--blue::after {
+        border-bottom-color: $aetm-blue;
+    }
+
+    &.aetm--gold::after {
+        border-bottom-color: $aetm-gold;
+    }
+
+    &.aetm--pink::after {
+        border-bottom-color: $aetm-pink;
+    }
+}
+
+.aetm--title-second {
+    font-size: $aetm-second-title-size;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: $white;
+    margin-bottom: 0.6rem;
+}
+
+.aetm--text-primary {
+    margin: 1rem auto;
+    font-size: $aetm-primary-text-size;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.9px;
+    text-align: center;
+}
+
+.aetm--text-second {
+    margin: auto;
+    font-size: $aetm-second-text-size;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.8px;
+    color: $warm-grey;
+}
