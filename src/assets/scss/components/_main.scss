@@ -130,13 +130,16 @@ $aetm-second-text-size: 1rem;
     position: relative;
     margin: 0 -2rem;
 
-    .orbit-previous,
-    .orbit-next {
-        padding: 0.6rem;
+    div {
+        display: none;
 
-        &:hover, &:active, &:focus {
-            background: none;
+        &:first-child {
+            display: block;
         }
+    }
+
+    &.slick-initialized div {
+        display: block;
     }
 }
 
@@ -175,20 +178,16 @@ $aetm-second-text-size: 1rem;
 
 .aetm--didyouknow {
     background: $aetm-pink;
-
-    .aetm--carousel {
-        .orbit-slide {
-            text-align: center;
-        }
-    }
 }
 
 .aetm--didyouknow--image {
-    width: 8rem;
+    height: 65px;
+    width: auto;
     margin: 0 auto;
 }
 
-.aetm--didyouknow--text {
+.aetm--didyouknow--text,
+.aetm--didyouknow--source {
     font-size: $aetm-second-text-size;
     font-weight: 500;
     font-style: italic;
@@ -197,8 +196,15 @@ $aetm-second-text-size: 1rem;
     letter-spacing: 0.8px;
     text-align: center;
     color: $white;
-    padding: 0 2rem;
+    padding: 0 4rem;
     margin: 1rem 0 0 0;
+}
+
+.aetm--didyouknow--source {
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: underline;
+    color: $white !important;
 }
 
 .aetm--products {
