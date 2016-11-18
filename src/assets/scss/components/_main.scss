@@ -212,6 +212,24 @@ $aetm-second-text-size: 1rem;
     margin-bottom: 1rem;
 }
 
+.aetm--methods {
+    border: 1px solid $aetm-gold;
+    padding: 1rem;
+    margin: 1rem;
+
+    .aetm--carousel {
+        margin: 0 -1rem;
+    }
+
+    .aetm--title-second {
+        font-size: $aetm-second-title-size + 0.2rem;
+    }
+
+    .aetm--text-second {
+        padding: 0 2rem;
+    }
+}
+
 .aetm--us {
     .aetm--title-primary {
         line-height: 1.06;
