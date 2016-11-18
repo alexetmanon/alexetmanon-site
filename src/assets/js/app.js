@@ -17,6 +17,7 @@ $(document).ready(function () {
     // "Did you know ?" section
     $('#didyouknow--carousel').slick({
         // autoplay: true,
+        initialSlide: Math.floor((Math.random() * 7) + 1),
         adaptiveHeight: true,
         prevArrow: '<button type="button" class="slick-prev"><img src="assets/img/aetm-arrow-white-left.svg"></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="assets/img/aetm-arrow-white-right.svg"></button>'
