@@ -54,6 +54,10 @@
 
 .aetm--didyouknow {
     background: $aetm-pink;
+
+    .aetm--title-second {
+        text-align: center !important;
+    }
 }
 
 .aetm--didyouknow--image {
@@ -107,6 +111,7 @@
 
     .aetm--title-second {
         font-size: $aetm-second-title-size + 0.3rem;
+        text-align: center !important;
     }
 
     .aetm--text-second {

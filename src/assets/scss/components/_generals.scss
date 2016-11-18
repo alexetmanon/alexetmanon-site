@@ -82,6 +82,7 @@ $aetm-max-size-main-content: rem-calc(585);
     text-transform: uppercase;
     color: $white;
     margin-bottom: 0.6rem;
+    text-align: left;
 }
 
 .aetm--text-primary {
@@ -92,6 +93,10 @@ $aetm-max-size-main-content: rem-calc(585);
     font-stretch: normal;
     letter-spacing: 0.9px;
     text-align: center;
+
+    @include breakpoint(medium) {
+        text-align: left;
+    }
 }
 
 .aetm--text-second {
