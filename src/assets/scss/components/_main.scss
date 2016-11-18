@@ -49,8 +49,18 @@ $aetm-second-text-size: 1rem;
     color: $aetm-pink !important;
 }
 
+.aetm--white {
+    color: $white !important;
+}
+
 .aetm--box {
     padding: 3rem;
+}
+
+.aetm--box--lille-bg {
+    margin: 1rem;
+    background: url('../img/lille-1000.jpg');
+    background-size: cover;
 }
 
 .aetm--title-primary {
@@ -216,6 +226,28 @@ $aetm-second-text-size: 1rem;
     width: 20%;
     margin: 1.9rem auto -3rem auto;
     margin-top: 1.8rem;
+}
+
+.aetm--contact {
+    .aetm--text-second {
+        font-style: italic;
+        font-weight: 500;
+    }
+}
+
+.aetm--contact--link {
+    display: inline-block;
+    border: solid 1px $white;
+    color: $white !important;
+    padding: 0.8rem 1rem;
+    margin-top: 1rem;
+    font-size: $aetm-second-text-size;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 1.2px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .aetm--lab--project {

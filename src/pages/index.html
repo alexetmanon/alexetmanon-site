@@ -1,41 +1,31 @@
 <header class="column row aetm--box text-center">
     <div class="aetm--header">
-        <!-- mobile -->
-        <img class="aetm--header--logo hide-for-medium" src="assets/img/aetm-logo-header-mobile.svg">
-
-        <!-- others -->
-        <img class="aetm--header--logo show-for-medium" src="assets/img/aetm-logo-header.svg">
+        <img class="aetm--header--logo" data-interchange="[assets/img/aetm-logo-header-mobile.svg, small], [assets/img/aetm-logo-header.svg, medium]">
 
         <p class="aetm--header--text">les artisans de l'application mobile à&nbsp;Lille</p>
 
-        <img class="aetm--header--next-section" src="assets/img/aetm-fleche-tel.svg">
+        <div data-magellan>
+            <a href="#case-study"><img class="aetm--header--next-section" src="assets/img/aetm-fleche-tel.svg"></a>
+        </div>
     </div>
 
 </header>
 
 <div class="column row aetm--box aetm--case-study">
-    <h2 class="aetm--title-primary aetm--gold">études de cas</h2>
+    <h2 class="aetm--title-primary aetm--gold" id="case-study">études de cas</h2>
 
     <p class="aetm--text-primary aetm--darkgold">Parfois un exemple vaut mieux qu'un long discours (mais on en a quand même mis plusieurs pour assurer le coup).</p>
 
     <div id="casestudy--carousel" class="aetm--carousel">
         <div>
-            <!-- mobile -->
-            <img class="hide-for-medium" src="assets/img/image1-ric-900.jpg" alt="Ric">
-
-            <!-- others -->
-            <img class="show-for-medium"  src="assets/img/image1-ric-1890.jpg" alt="Ric (large)">
+            <img data-interchange="[assets/img/image1-ric-900.jpg, small], [assets/img/image1-ric-1890.jpg, medium]">
 
             <!-- <a href="#" class="aetm--carousel--read">
                 <span class="aetm--title-second">Lire</span><img src="assets/img/aetm-arrow-white-right.svg">
             </a> -->
         </div>
         <div>
-            <!-- mobile -->
-            <img class="hide-for-medium" src="assets/img/image2-creazap-900.jpg" alt="Créa'ZAP">
-
-            <!-- others -->
-            <img class="show-for-medium" src="assets/img/image2-creazap-1890.jpg" alt="Créa'ZAP">
+            <img data-interchange="[assets/img/image2-creazap-900.jpg, small], [assets/img/image2-creazap-1890.jpg, medium]">
 
             <!-- <a href="#" class="aetm--carousel--read">
                 <span class="aetm--title-second">Lire</span><img src="assets/img/aetm-arrow-white-right.svg">
@@ -106,7 +96,15 @@
     <h3 class="aetm--title-second aetm--blue">Un besoin particulier, une question, un doute ? </h3>
     <p class="aetm--text-second aetm--blue ">On est pas psychologues, mais si ça parle d'application mobile on saura sans doute te répondre&nbsp;! (au pire on t'en recommandera un bien, de psychologue)</p>
 
-    <img class="aetm--us--next-section" src="assets/img/aetm-fleche-tasse.svg">
+    <div data-magellan>
+        <a href="#contact"><img class="aetm--us--next-section" src="assets/img/aetm-fleche-tasse.svg"></a>
+    </div>
+</div>
+
+<div class="column row aetm--box aetm--box--lille-bg text-center aetm--white aetm--contact" id="contact">
+    <p class="aetm--text-second aetm--white">Nous concevons nos applications mobiles sur la métropole lilloise et adorons découvrir de nouveaux salons de thé avec nos clients ;-)</p>
+
+    <a href="mailto:bonjour@alexetmanon.com" class="aetm--contact--link">Nous contacter</a>
 </div>
 
 <div class="column row aetm--box">
