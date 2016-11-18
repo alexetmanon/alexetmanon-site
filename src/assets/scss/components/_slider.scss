@@ -1,18 +1,5 @@
 @charset "UTF-8";
 
-// Default Variables
-
-$slick-loader-path: "./" !default;
-
-@function slick-image-url($url) {
-    @if function-exists(image-url) {
-        @return image-url($url);
-    }
-    @else {
-        @return url($slick-loader-path + $url);
-    }
-}
-
 /* Slider */
 
 .slick-slide {
@@ -22,7 +9,7 @@ $slick-loader-path: "./" !default;
 
 .slick-list {
     .slick-loading & {
-        background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
+        background: #fff url("../img/ajax-loader.gif") center center no-repeat;
     }
 }
 
