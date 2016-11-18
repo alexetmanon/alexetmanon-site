@@ -117,33 +117,26 @@ $aetm-second-text-size: 1rem;
 }
 
 .aetm--carousel {
+    position: relative;
     margin: 0 -2rem;
 
     .orbit-previous,
     .orbit-next {
-        padding: 0.5rem;
+        padding: 0.6rem;
 
-        &:hover, &:focus {
-            background-color: transparent;
-        }
-    }
-
-    .orbit-slide {
-        padding: 1rem;
-
-        .aetm--text-second {
-            text-align: left;
-            margin-top: -1rem;
+        &:hover, &:active, &:focus {
+            background: none;
         }
     }
 }
 
 .aetm--carousel--read {
-    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
     padding: 0.6rem 1rem;
     background-color: $aetm-blue;
-    transform: translateY(-50%);
-    margin-right: -1rem;
 
     img {
         width: 1.6rem;
@@ -152,6 +145,7 @@ $aetm-second-text-size: 1rem;
 
     img, span {
         vertical-align: middle;
+        display: inline;
     }
 }
 
@@ -159,19 +153,13 @@ $aetm-second-text-size: 1rem;
     padding-bottom: 0;
 
     .aetm--carousel {
-        .orbit-previous,
-        .orbit-next {
-            background-color: $aetm-gold;
-            top: 45vw; // dirty hack
-
-            &:hover, &:focus {
-                background-color: $aetm-gold;
-            }
+        .slick-slide {
+            padding: 1rem;
         }
-    }
 
-    .orbit-slide {
-        text-align: right;
+        .slick-arrow {
+            background: $aetm-gold;
+        }
     }
 }
 
