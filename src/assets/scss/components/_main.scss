@@ -11,7 +11,11 @@
 
 .aetm--header--logo {
     width: 100%;
-    margin-top: 4rem;
+    margin-top: 2rem;
+
+    @include breakpoint(medium) {
+        margin-top: 6rem;
+    }
 }
 
 .aetm--header--text {
@@ -70,6 +74,8 @@
 }
 
 .aetm--didyouknow--source {
+    display: block;
+    margin-top: 0.6rem;
     font-style: normal;
     font-weight: normal;
     text-decoration: underline;
@@ -116,13 +122,17 @@
 }
 
 .aetm--us--picture {
-    margin: 0 -2rem 1rem -2rem;
+    margin: 0 -2.4rem 1rem -2.4rem;
+
+    @include breakpoint(medium) {
+        margin: 0 0 1rem 0;
+    }
 }
 
 .aetm--us--next-section {
     max-width: 5rem;
     width: 20%;
-    margin: 1.9rem auto -3rem auto;
+    margin: 1.9rem auto -2rem auto;
     margin-top: 1.8rem;
 }
 
