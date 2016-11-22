@@ -1,4 +1,12 @@
 $main-color: $aetm-gold;
+$border-distance: 20px;
+
+@include breakpoint(medium) {
+    .mfb-component--br {
+        right: 15px !important;
+        bottom: 15px !important;
+    }
+}
 
 $number-of-child-buttons: 4;
 $button-space: 56px; // vertical space between childs buttons
@@ -23,6 +31,13 @@ $button-space: 56px; // vertical space between childs buttons
         height: 24px;
         margin: auto;
     }
+}
+
+/**
+ * mfb custom
+ */
+.mfb-component--br {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 [data-mfb-label]:after {

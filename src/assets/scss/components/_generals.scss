@@ -108,3 +108,8 @@ $aetm-max-size-main-content: rem-calc(585);
     letter-spacing: 0.8px;
     color: $warm-grey;
 }
+
+// removes chrome overlay on mobile tap
+[data-magellan] a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
