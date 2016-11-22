@@ -11,7 +11,8 @@ $(document).ready(function () {
     });
     $('#casestudy--carousel-text').slick({
         arrows: false,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        asNavFor: '#casestudy--carousel'
     });
 
     // "Did you know ?" section
@@ -32,6 +33,7 @@ $(document).ready(function () {
     });
     $('#methods--carousel-text').slick({
         arrows: false,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        asNavFor: '#methods--carousel'
     });
 });
