@@ -9,6 +9,7 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
+import ftp      from 'vinyl-ftp';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -31,6 +32,9 @@ gulp.task('build',
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
   gulp.series('build', server, watch));
+
+// Deploy from "dist" folder through FTP
+gulp.task('deploy', gulp.series('build', deploy));
 
 // Delete the "dist" folder
 // This happens every time a build starts
@@ -139,4 +143,25 @@ function watch() {
   gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
   gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload));
+}
+
+// Deploy builed version through FTP
+function deploy() {
+  var conn = ftp.create({
+        host:     process.env.FTP_HOST,
+        user:     process.env.FTP_USER,
+        password: process.env.FTP_PASSWORD,
+        parallel: 10,
+        secure:   true
+    });
+
+    var globs = [
+        'dist/**',
+        '!dist/styleguide.html'
+    ];
+
+    return gulp.src(globs, {
+      base: '.',
+      buffer: false
+    }).pipe(conn.dest('/www'));
 }
