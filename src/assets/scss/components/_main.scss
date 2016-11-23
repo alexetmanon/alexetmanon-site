@@ -59,6 +59,11 @@
     .aetm--title-second {
         text-align: center !important;
     }
+
+    .aetm--carousel .slick-track {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .aetm--didyouknow--image {
