@@ -1,6 +1,6 @@
 langage: node_js
 node_js:
-- 6.9.1
+  - node
 
 # branches:
 #   only:
