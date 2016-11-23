@@ -2,9 +2,9 @@ language: node_js
 node_js:
   - node
 
-# branches:
-#   only:
-#   - master
+branches:
+  only:
+  - master
 
 before_install:
   - npm install -g gulp
@@ -21,7 +21,7 @@ deploy:
   script: npm run deploy
   skip_cleanup: true
   on:
-    branch: develop
+    branch: master
 
 notifications:
   email: false
