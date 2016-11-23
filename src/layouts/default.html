@@ -1,0 +1,46 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="description" content="alex et manon : les artisans de l'application mobile à Lille">
+    <meta name="keywords" content="alex et manon, mobile, lille, freelance">
+    <meta name="author" content="alex et manon">
+
+    <meta property="og:title" content="alex et manon" />
+    <meta property="og:description" content="alex et manon : les artisans de l'application mobile à Lille" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://alexetmanon.com" />
+    <meta property="og:image" content="{{root}}assets/img/aetm-logo-header.svg"/>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="alex et manon : les artisans de l'application mobile à Lille">
+    <meta name="twitter:image" content="{{root}}assets/img/aetm-logo-header.svg">
+    <meta name="twitter:site" content="@a_et_m">
+    <meta name="twitter:creator" content="@a_et_m">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alex et manon</title>
+    <link rel="shortcut icon" type="image/png" href="assets/img/aetm-favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+  </head>
+  <body>
+
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> body}}
+
+    <script src="{{root}}assets/js/app.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-85251159-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
