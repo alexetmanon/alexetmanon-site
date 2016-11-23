@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+@import 'slick.scss';
+
+.aetm--carousel {
+    position: relative;
+    margin: 0 -2rem;
+
+    div {
+        display: none;
+
+        &:first-child {
+            display: block;
+        }
+    }
+
+    &.slick-initialized div {
+        display: block;
+    }
+}
+
+.aetm--carousel--read {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    padding: 0.6rem 1rem;
+    background-color: $aetm-blue;
+
+    img {
+        width: 1.6rem;
+        margin-left: 1rem;
+    }
+
+    img, span {
+        vertical-align: middle;
+        display: inline;
+    }
+}
+
+
+/* Slider */
+
+.slick-slide {
+    position: relative;
+    outline: none;
+}
+
+.slick-list {
+    .slick-loading & {
+        background: #fff url("../img/ajax-loader.gif") center center no-repeat;
+    }
+}
+
+/* Arrows */
+
+.slick-arrow {
+    padding: 0.5rem;
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    color: transparent;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    border: none;
+    outline: none;
+    z-index: 10;
+
+    &:hover, &:focus {
+        outline: none;
+
+    }
+}
+
+.slick-prev {
+    left: 0;
+    [dir="rtl"] & {
+        left: auto;
+        right: 0;
+    }
+}
+
+.slick-next {
+    right: 0;
+    [dir="rtl"] & {
+        left: 0;
+        right: auto;
+    }
+}

@@ -1,0 +1,58 @@
+$main-color: $aetm-gold;
+$border-distance: 20px;
+
+@include breakpoint(medium) {
+    .mfb-component--br {
+        right: 15px !important;
+        bottom: 15px !important;
+    }
+}
+
+$number-of-child-buttons: 4;
+$button-space: 56px; // vertical space between childs buttons
+
+@import 'mfb.scss';
+
+.aetm--fab-icon {
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    min-width: 40px;
+    width: 100%;
+    max-width: 56px;
+    min-height: 40px;
+    height: 100%;
+    max-height: 56px;
+
+    svg {
+        fill: $white;
+        width: 24px;
+        height: 24px;
+        margin: auto;
+    }
+}
+
+/**
+ * mfb custom
+ */
+.mfb-component--br {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+[data-mfb-label]:after {
+    opacity: 1;
+    color: $white;
+    background: rgba(0, 0, 0, .6);
+    margin: 0;
+    transform: translateY(-50%);
+}
+
+.mfb-component__button--child {
+    height: 40px;
+    width: 40px;
+}
+
+.mfb-component__list > li {
+    padding: 0 8px;
+}
