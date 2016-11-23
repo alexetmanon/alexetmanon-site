@@ -44,6 +44,8 @@ $button-space: 56px; // vertical space between childs buttons
     opacity: 1;
     color: $white;
     background: rgba(0, 0, 0, .6);
+    margin: 0;
+    transform: translateY(-50%);
 }
 
 .mfb-component__button--child {
