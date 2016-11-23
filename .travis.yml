@@ -19,5 +19,6 @@ script: npm run build
 deploy:
   provider: script
   script: npm run deploy
+  skip_cleanup: true
   on:
     branch: develop
