@@ -12,9 +12,13 @@ $(document).ready(function () {
         asNavFor: '#casestudy--carousel'
     });
 
+    var initialSlide = Math.floor((Math.random() * 6) + 2);
+    console.log(initialSlide)
+
     // "Did you know ?" section
     $('#didyouknow--carousel').slick({
-        initialSlide: Math.floor((Math.random() * 7) + 1),
+        // random slide except first one (about coffee)
+        initialSlide: initialSlide,
         prevArrow: '<button type="button" class="slick-prev"><img src="assets/img/aetm-arrow-white-left.svg"></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="assets/img/aetm-arrow-white-right.svg"></button>'
     });
