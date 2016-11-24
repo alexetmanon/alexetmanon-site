@@ -9,7 +9,7 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
-import ftp      from 'vinyl-ftp';
+import rsync    from 'gulp-rsync';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -34,7 +34,7 @@ gulp.task('default',
   gulp.series('build', server, watch));
 
 // Deploy from "dist" folder through FTP
-gulp.task('deploy', gulp.series(cleanFtp, deploy));
+gulp.task('deploy', deploy);
 
 // Delete the "dist" folder
 // This happens every time a build starts
@@ -145,36 +145,21 @@ function watch() {
   gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload));
 }
 
-// Clean the remote directory
-function cleanFtp(done) {
-  var conn = ftp.create({
-      host:     process.env.FTP_HOST,
-      user:     process.env.FTP_USER,
-      password: process.env.FTP_PASSWORD,
-      parallel: 10,
-  });
-
-  conn.rmdir('/www', done);
-}
-
 // Deploy builed version through FTP
 function deploy() {
-  var conn = ftp.create({
-      host:     process.env.FTP_HOST,
-      user:     process.env.FTP_USER,
-      password: process.env.FTP_PASSWORD,
-      parallel: 10,
-  });
-
   var globs = [
       'dist/**',
       '!dist/styleguide.html'
   ];
 
-  return gulp
-    .src(globs, {
-      base: 'dist',
-      buffer: false
-    })
-    .pipe(conn.dest('/www'));
+  return gulp.src(globs)
+    .pipe(rsync({
+      root: 'dist',
+      username: process.env.SSH_USER,
+      hostname: process.env.SSH_HOST,
+      destination: '/var/www/beta-alexetmanon-www',
+      clean: true,
+      recursive: true,
+      incremental: true,
+    }));
 }
