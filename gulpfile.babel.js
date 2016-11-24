@@ -152,12 +152,14 @@ function deploy() {
       '!dist/styleguide.html'
   ];
 
+  var remoteDir = PRODUCTION ? '/var/www/alexetmanon-www' : '/var/www/beta-alexetmanon-www';
+
   return gulp.src(globs)
     .pipe(rsync({
       root: 'dist',
       username: process.env.SSH_USER,
       hostname: process.env.SSH_HOST,
-      destination: '/var/www/beta-alexetmanon-www',
+      destination: remoteDir,
       clean: true,
       recursive: true,
       incremental: true,
