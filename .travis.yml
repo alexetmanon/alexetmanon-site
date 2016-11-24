@@ -1,27 +1,23 @@
 language: node_js
 node_js:
-  - node
-
+- node
 branches:
   only:
   - master
-
 before_install:
-  - npm install -g gulp
-  - npm install -g bower
-
+- openssl aes-256-cbc -K $encrypted_38f5841c65a5_key -iv $encrypted_38f5841c65a5_iv
+  -in deploy_rsa.enc -out deploy_rsa -d
+- npm install -g gulp
+- npm install -g bower
 install:
-  - npm install
-  - bower install
-
+- npm install
+- bower install
 script: npm run build
-
 deploy:
   provider: script
   script: npm run deploy
   skip_cleanup: true
   on:
     branch: master
-
 notifications:
   email: false
