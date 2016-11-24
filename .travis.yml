@@ -32,10 +32,10 @@ before_deploy:
 
 deploy:
   - provider: script
-    script: npm run deploy -- --production
+    script: npm run deploy-prod
     skip_cleanup: true
     on:
-      branch: master
+      tag: true
   - provider: script
     script: npm run deploy
     skip_cleanup: true
