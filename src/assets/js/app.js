@@ -13,7 +13,6 @@ $(document).ready(function () {
     });
 
     var initialSlide = Math.floor((Math.random() * 6) + 2);
-    console.log(initialSlide)
 
     // "Did you know ?" section
     $('#didyouknow--carousel').slick({
