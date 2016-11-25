@@ -38,6 +38,27 @@ $button-space: 56px; // vertical space between childs buttons
  */
 .mfb-component--br {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    // overlay on small screen
+    @include breakpoint(small only) {
+        &[data-mfb-state="open"] .mfb-component__list:before {
+            left: 0;
+            top: 0;
+            border-radius: 0;
+        }
+
+        .mfb-component__list:before {
+            content: '';
+            position: fixed;
+            left: 100vw;
+            top: 100vh;
+            right: 0;
+            bottom: 0;
+            border-top-left-radius: 1000px;
+            background: rgba(255, 255, 255, 0.8);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+    }
 }
 
 [data-mfb-label]:after {
