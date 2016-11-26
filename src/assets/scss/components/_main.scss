@@ -20,7 +20,7 @@
 }
 
 .aetm--header--text {
-    margin-top: 2rem;
+    margin: 2rem 0;
     font-family: Roboto;
     font-size: 2rem;
     font-weight: 300;
@@ -39,6 +39,21 @@
     max-width: 6rem;
     width: 15%;
     margin: 0 auto -2rem auto;
+}
+
+// Avoid header to overflow in landscape mode because of the minimal vertical required
+@media screen and #{breakpoint(landscape)} and (max-height: 640px) {
+    .aetm--header {
+        height: auto;
+    }
+
+    .aetm--header--logo {
+        margin-top: 0;
+    }
+
+    .aetm--header--next-section {
+        width: 10%;
+    }
 }
 
 .aetm--case-study {

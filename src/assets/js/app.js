@@ -12,8 +12,7 @@ $(document).ready(function () {
         asNavFor: '#casestudy--carousel'
     });
 
-    var initialSlide = Math.floor((Math.random() * 6) + 2);
-    console.log(initialSlide)
+    var initialSlide = Math.floor((Math.random() * 5) + 2);
 
     // "Did you know ?" section
     $('#didyouknow--carousel').slick({
