@@ -42,21 +42,20 @@ $button-space: 56px; // vertical space between childs buttons
     // overlay on small screen
     @include breakpoint(small only) {
         &[data-mfb-state="open"] .mfb-component__list:before {
-            left: 0;
-            top: 0;
-            border-radius: 0;
+            transform: scale(50);
         }
 
         .mfb-component__list:before {
             content: '';
-            position: fixed;
-            left: 100vw;
-            top: 100vh;
+            position: absolute;
+            top: 0;
             right: 0;
-            bottom: 0;
-            border-top-left-radius: 1000px;
+            width: $main_button_size;
+            height: $main_button_size;
+            border-radius: 100%;
             background: rgba(255, 255, 255, 0.8);
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(1);
         }
     }
 }
