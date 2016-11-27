@@ -10,6 +10,11 @@ branches:
   - master
   - develop
 
+cache:
+  directories:
+  - node_modules
+  - bower_components
+
 addons:
   ssh_known_hosts: vps.alexandrebonhomme.fr
 
