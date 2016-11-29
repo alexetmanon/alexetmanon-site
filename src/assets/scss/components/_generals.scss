@@ -5,6 +5,8 @@ $aetm-second-text-size: 1rem;
 
 $aetm-max-size-main-content: rem-calc(585);
 
+$aetm-box-padding: 3rem;
+
 .aetm--gold {
     color: $aetm-gold !important;
 }
@@ -26,7 +28,7 @@ $aetm-max-size-main-content: rem-calc(585);
 }
 
 .aetm--box {
-    padding: 3rem;
+    padding: $aetm-box-padding;
 }
 
 .aetm--box--lille-bg {
