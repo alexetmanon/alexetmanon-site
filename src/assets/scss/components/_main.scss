@@ -161,7 +161,6 @@
 .aetm--us {
     .aetm--title-primary {
         line-height: 1.06;
-        margin-bottom: 4px;
 
         &::after {
             bottom: -4px;
@@ -170,10 +169,11 @@
 }
 
 .aetm--us--picture {
-    margin: 0 -2.4rem 1rem -2.4rem;
+    margin: $aetm-box-padding -2.4rem;
 
     @include breakpoint(medium) {
-        margin: 0 0 1rem 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -187,12 +187,7 @@
     margin: $aetm-box-padding auto;
     border: 1px solid $aetm-pink;
 
-    .aetm--contact--link {
-        padding: 0.8rem 1.4rem;
-        border: solid 1px $aetm-pink;
-        background-color: $aetm-pink;
-        font-weight: 300;
-
+    .aetm--button--block {
         .aetm--contact--link--arrow {
             width: 1.4rem;
             margin-left: 0.4rem;
@@ -207,21 +202,10 @@
         font-style: italic;
         font-weight: 500;
     }
-}
 
-.aetm--contact--link {
-    display: inline-block;
-    border: solid 1px $white;
-    color: $white !important;
-    padding: 0.8rem 1rem;
-    margin-top: 2rem;
-    font-size: $aetm-second-text-size;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    letter-spacing: 1.2px;
-    text-align: center;
-    text-transform: uppercase;
+    .aetm--button--outlines {
+        font-weight: 500;
+    }
 }
 
 .aetm--lab--project {
@@ -273,6 +257,10 @@
     text-align: center;
     color: $aetm-pink;
     margin: 0;
+}
+
+.aetm--newsletter--input {
+
 }
 
 .aetm--footer {

@@ -123,6 +123,39 @@ $aetm-box-padding: 3rem;
     color: $warm-grey;
 }
 
+.aetm--button--block,
+.aetm--button--outlines {
+    display: inline-block;
+    border: solid 1px $white;
+    color: $white !important;
+    padding: 0.8rem 1.4rem;
+    margin-top: 2rem;
+    font-size: $aetm-second-text-size;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 1.2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.aetm--button--block {
+    &.aetm--blue {
+        border: solid 1px $aetm-blue;
+        background-color: $aetm-blue;
+    }
+
+    &.aetm--gold {
+        border: solid 1px $aetm-gold;
+        background-color: $aetm-gold;
+    }
+
+    &.aetm--pink {
+        border: solid 1px $aetm-pink;
+        background-color: $aetm-pink;
+    }
+}
+
 // removes chrome overlay on mobile tap
 [data-magellan] a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
