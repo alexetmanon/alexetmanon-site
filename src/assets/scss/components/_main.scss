@@ -73,6 +73,10 @@
     }
 }
 
+.aetm--contact-top {
+    border: 1px solid $aetm-pink;
+}
+
 .aetm--case-study {
     .aetm--carousel {
         .slick-slide {
@@ -87,6 +91,7 @@
 
 .aetm--didyouknow {
     background: $aetm-pink;
+    margin: $aetm-box-padding auto;
 
     .aetm--title-second {
         text-align: center !important;

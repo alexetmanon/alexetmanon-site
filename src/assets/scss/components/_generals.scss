@@ -98,6 +98,10 @@ $aetm-box-padding: 3rem;
 
     @include breakpoint(medium) {
         text-align: left;
+
+        &.text-center {
+            text-align: center;
+        }
     }
 }
 
