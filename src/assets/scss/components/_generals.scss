@@ -52,6 +52,10 @@ $aetm-box-padding: 3rem;
     margin: 0 0 1rem -2rem;
     text-align: left;
 
+    &.text-center {
+        text-align: center;
+    }
+
     &::after {
         position: absolute;
         content: '';
@@ -85,6 +89,10 @@ $aetm-box-padding: 3rem;
     color: $white;
     margin-bottom: 0.6rem;
     text-align: left;
+
+    &.text-center {
+        text-align: center;
+    }
 }
 
 .aetm--text-primary {
