@@ -9,7 +9,6 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
-import rsync    from 'gulp-rsync';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -52,6 +51,7 @@ function copy() {
 // Copy page templates into finished HTML files
 function pages() {
   return gulp.src('src/pages/**/*.{html,hbs,handlebars}')
+    .pipe($.if('index.html', setBuildDate()))
     .pipe(panini({
       root: 'src/pages/',
       layouts: 'src/layouts/',
@@ -155,7 +155,7 @@ function deploy() {
   var remoteDir = PRODUCTION ? '/var/www/alexetmanon-www' : '/var/www/beta-alexetmanon-www';
 
   return gulp.src(globs)
-    .pipe(rsync({
+    .pipe($.rsync({
       root: 'dist',
       username: process.env.SSH_USER,
       hostname: process.env.SSH_HOST,
@@ -164,4 +164,12 @@ function deploy() {
       recursive: true,
       incremental: true,
     }));
+}
+
+// Set the build date in the index file
+function setBuildDate() {
+  var now = new Date();
+  var months = "janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.".split("_");
+
+  return $.stringReplace('{buildDate}', months[now.getMonth()] + ' ' + now.getFullYear());
 }
