@@ -87,6 +87,7 @@
 
 .aetm--didyouknow {
     background: $aetm-pink;
+    margin: $aetm-box-padding auto;
 
     .aetm--title-second {
         text-align: center !important;
@@ -160,7 +161,6 @@
 .aetm--us {
     .aetm--title-primary {
         line-height: 1.06;
-        margin-bottom: 4px;
 
         &::after {
             bottom: -4px;
@@ -169,10 +169,11 @@
 }
 
 .aetm--us--picture {
-    margin: 0 -2.4rem 1rem -2.4rem;
+    margin: $aetm-box-padding -2.4rem;
 
     @include breakpoint(medium) {
-        margin: 0 0 1rem 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -182,28 +183,36 @@
     margin: 2rem auto 0 auto;
 }
 
-.aetm--contact {
+.aetm--contact-top {
+    margin: $aetm-box-padding auto;
+    border: 1px solid $aetm-pink;
+
+    .aetm--text-primary {
+        font-size: 1.6rem;
+    }
+
+    .aetm--button--block {
+        margin-top: 2rem;
+
+        .aetm--contact--link--arrow {
+            width: 1.4rem;
+            margin-left: 0.4rem;
+        }
+    }
+}
+
+.aetm--contact-bottom {
     padding: 4rem 3rem;
 
     .aetm--text-second {
         font-style: italic;
         font-weight: 500;
     }
-}
 
-.aetm--contact--link {
-    display: inline-block;
-    border: solid 1px $white;
-    color: $white !important;
-    padding: 0.8rem 1rem;
-    margin-top: 2rem;
-    font-size: $aetm-second-text-size;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    letter-spacing: 1.2px;
-    text-align: center;
-    text-transform: uppercase;
+    .aetm--button--outlines {
+        margin-top: 2rem;
+        font-weight: 500;
+    }
 }
 
 .aetm--lab--project {
@@ -213,7 +222,7 @@
     text-align: center;
     padding: 1.6rem;
     margin: 2rem auto;
-    max-width: rem-calc(410);
+    max-width: $aetm-max-size-second-content;
 
     p {
         font-family: Futura-Book;
@@ -240,6 +249,32 @@
     background-color: $aetm-pink;
     border-radius: 50%;
     padding: 1.1rem;
+}
+
+.aetm--newsletter {
+    background: $aetm-gold;
+
+    .aetm--title-second {
+        margin: 0 auto 0.6rem auto;
+        max-width: $aetm-max-size-second-content;
+    }
+
+    .input-group {
+        margin-bottom: 0;
+    }
+}
+
+.aetm--newsletter--subscribe-text {
+    font-family: Futura-Book;
+    font-size: $aetm-primary-title-size;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.06;
+    text-align: center;
+    color: $aetm-pink;
+    margin: 0 auto 2rem auto;
+    max-width: $aetm-max-size-second-content;
 }
 
 .aetm--footer {
