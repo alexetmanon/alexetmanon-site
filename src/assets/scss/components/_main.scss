@@ -256,16 +256,31 @@
 }
 
 .aetm--newsletter {
+    position: relative;
     background: $aetm-gold;
 
     .aetm--title-second {
-        margin: 0 auto 0.6rem auto;
+        margin: 1rem auto 0.6rem auto;
         max-width: $aetm-max-size-second-content;
     }
 
     .input-group {
         margin-bottom: 0;
     }
+}
+
+.aetm--newsletter--header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.aetm--newsletter--header--img {
+    max-width: 5rem;
+    width: 20%;
+    margin: 0 auto;
 }
 
 .aetm--newsletter--subscribe-text {
