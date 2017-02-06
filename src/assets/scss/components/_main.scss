@@ -1,28 +1,28 @@
 @import "fonts";
 @import "generals";
 @import "carousel";
-@import 'fab';
 
 .aetm--header {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     height: calc(100vh - 6rem);
+    max-width: $aetm-max-size-main-content;
+    margin: 0 auto;
 }
 
 .aetm--header--logo {
     width: 100%;
-    margin-top: 2rem;
 
     @include breakpoint(medium) {
-        margin-top: 6rem;
+        width: 85%;
     }
 }
 
 .aetm--header--text {
-    margin: 2rem 0;
+    margin: 2rem 0 8rem 0;
     font-family: Roboto;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 300;
     font-style: italic;
     line-height: 1.2;
@@ -30,15 +30,22 @@
     text-align: center;
     color: $aetm-medium-pink;
 
-     @include breakpoint(medium) {
-        font-size: 2.6rem;
+    @include breakpoint(medium) {
+        font-size: 2.1rem;
     }
 }
 
 .aetm--header--next-section {
-    max-width: 6rem;
+    position: absolute;
+    bottom: $aetm-box-padding;
+    left: 0;
+    right: 0;
+}
+
+.aetm--header--next-section--img {
+    max-width: 4rem;
     width: 15%;
-    margin: 0 auto -2rem auto;
+    margin: 0 auto;
 }
 
 // Avoid header to overflow in landscape mode because of the minimal vertical required
@@ -52,7 +59,16 @@
     }
 
     .aetm--header--next-section {
+        position: relative;
+        bottom: auto;
+    }
+
+    .aetm--header--next-section--img {
         width: 10%;
+    }
+
+    .aetm--header--text {
+        margin: 2rem 0;
     }
 }
 
@@ -70,6 +86,7 @@
 
 .aetm--didyouknow {
     background: $aetm-pink;
+    margin: $aetm-box-padding auto;
 
     .aetm--title-second {
         text-align: center !important;
@@ -122,6 +139,10 @@
     margin-bottom: 1rem;
 }
 
+.aetm--box.aetm--methods--box {
+    padding: 0 1rem;
+}
+
 .aetm--methods {
     border: 1px solid $aetm-gold;
     padding: 2rem 1rem;
@@ -143,7 +164,6 @@
 .aetm--us {
     .aetm--title-primary {
         line-height: 1.06;
-        margin-bottom: 4px;
 
         &::after {
             bottom: -4px;
@@ -152,10 +172,11 @@
 }
 
 .aetm--us--picture {
-    margin: 0 -2.4rem 1rem -2.4rem;
+    margin: $aetm-box-padding -2.4rem;
 
     @include breakpoint(medium) {
-        margin: 0 0 1rem 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -165,38 +186,50 @@
     margin: 2rem auto 0 auto;
 }
 
-.aetm--contact {
+.aetm--contact-top {
+    margin: $aetm-box-padding auto;
+    border: 1px solid $aetm-pink;
+
+    .aetm--text-primary {
+        font-size: 1.6rem;
+    }
+
+    .aetm--button--block {
+        margin-top: 2rem;
+
+        .aetm--contact--link--arrow {
+            width: 1.4rem;
+            margin-left: 0.4rem;
+        }
+    }
+}
+
+.aetm--contact-bottom {
     padding: 4rem 3rem;
 
     .aetm--text-second {
         font-style: italic;
         font-weight: 500;
     }
-}
 
-.aetm--contact--link {
-    display: inline-block;
-    border: solid 1px $white;
-    color: $white !important;
-    padding: 0.8rem 1rem;
-    margin-top: 2rem;
-    font-size: $aetm-second-text-size;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    letter-spacing: 1.2px;
-    text-align: center;
-    text-transform: uppercase;
+    .aetm--button--outlines {
+        margin-top: 2rem;
+        font-weight: 500;
+    }
 }
 
 .aetm--lab--project {
+    margin: 2rem auto;
+}
+
+.aetm--lab--project--button {
     display: block;
     position: relative;
     border: solid 1px $aetm-pink;
     text-align: center;
     padding: 1.6rem;
     margin: 2rem auto;
-    max-width: rem-calc(410);
+    max-width: $aetm-max-size-second-content;
 
     p {
         font-family: Futura-Book;
@@ -223,6 +256,59 @@
     background-color: $aetm-pink;
     border-radius: 50%;
     padding: 1.1rem;
+}
+
+.aetm--newsletter {
+    position: relative;
+    background: $aetm-gold;
+
+    .aetm--title-second {
+        margin: 1rem auto 0.6rem auto;
+        max-width: $aetm-max-size-second-content;
+    }
+
+    .input-group {
+        margin-bottom: 0;
+
+        @include breakpoint(small only) {
+            display: block;
+
+            .input-group-button {
+                display: block;
+
+                & > input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.aetm--newsletter--header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-60%);
+}
+
+.aetm--newsletter--header--img {
+    max-width: 5rem;
+    width: 20%;
+    margin: 0 auto;
+}
+
+.aetm--newsletter--subscribe-text {
+    font-family: Futura-Book;
+    font-size: $aetm-primary-title-size;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.06;
+    text-align: center;
+    color: $aetm-pink;
+    margin: 0 auto 2rem auto;
+    max-width: $aetm-max-size-second-content;
 }
 
 .aetm--footer {
