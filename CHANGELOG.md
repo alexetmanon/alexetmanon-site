@@ -1,5 +1,7 @@
-# Changelog
+# 1.2.0
 
-## Version 1.0 (November 19, 2015)
+- Adds Hotjar tracking code
 
-Initial release.
+# 1.0 (November 19, 2015)
+
+- Initial release.
